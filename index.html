@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="global.css">
+    <title>ContractHub Login</title>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+        <a href="" class="navbar-brand">ContractHub Logo</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNav" style="display:none">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="Home.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                        <a href="Profile.html" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="SearchJobs.html" class="nav-link">Search Jobs</a>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="loginDiv" style="display:none">
+            <h3 id="login-label">Login</h3>
+                <label for="userEmail">Email</label>
+                <input type="text" name="Email" id="userEmail">
+                <br>
+                <label for="userPass">Password</label>
+                <input type="password" name="Password" id="userPass">
+                <br>
+                <button onclick="Login()">Login</button>
+                <button onclick="registerUser()">Sign Up</button>
+                <button onclick="googleSign()">Login with Google</button>
+            </div>
+            
+            
+            <div id="userDiv" style="display:none">
+                <h2>Welcome User</h2>
+                <p id="user_para">Welcome to Firebase Login Example</p>
+                <button onclick="logOut()">Logout</button>
+            </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
