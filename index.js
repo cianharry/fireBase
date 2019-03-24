@@ -24,6 +24,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         document.getElementById("user_para").innerHTML = "Welcome user: "+email_id;
         console.log(email_id);
       }
+      //Goes to Home page once the user is logged in
+      window.location = "Home.html";
 
     } else {
       // No user is signed in.
@@ -53,7 +55,10 @@ function Login(){
 
 function logOut(){
 
+    //logs out the user and redirects the user to the login page
     firebase.auth().signOut();
+    window.location = "index.html";
+
 }
 
 function registerUser() {
@@ -68,12 +73,12 @@ function registerUser() {
       return;
     }
 
-    // Sign in with email and pass.
+    // Firebase Sign in with email and pass.
     firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      // [START_EXCLUDE]
+      
       if (errorCode == 'auth/weak-password') {
         alert('The password is too weak.');
       } else {
