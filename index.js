@@ -14,7 +14,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       // User is signed in.
       document.getElementById("userDiv").style.display = "block";
       document.getElementById("loginDiv").style.display = "none";
-      document.getElementById("myNav").style.display = "block";
+      document.getElementById("userNav").style.display = "inline-block";
 
       var user = firebase.auth().currentUser;
 
@@ -25,13 +25,13 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log(email_id);
       }
       //Goes to Home page once the user is logged in
-      window.location = "Home.html";
+      //window.location = "Home.html";
 
     } else {
       // No user is signed in.
       document.getElementById("userDiv").style.display = "none";
       document.getElementById("loginDiv").style.display = "block";
-      document.getElementById("myNav").style.display = "block";
+      document.getElementById("userNav").style.display = "none";
       console.log("not logged in");
     }
   });
