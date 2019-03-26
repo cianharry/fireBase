@@ -52,8 +52,9 @@ function Login(){
           } else {
             alert(errorMessage);
           }
+          //window.location = "Home.html";
       });
-}
+    }
 
 function logOut(){
 
@@ -66,6 +67,8 @@ function logOut(){
 function registerUser() {
     var userEmail = document.getElementById('userEmail').value;
     var userPass = document.getElementById('userPass').value;
+
+    //We need to add proper validation for email etc here (REGEX?)
     if (userEmail.length < 4) {
       alert('Please enter a valid email address.');
       return;
