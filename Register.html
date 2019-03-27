@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="LoggedIn.css">
     <title>ContractHub Register</title>
   </head>
   <body>
@@ -15,7 +16,7 @@
       <a href="" class="navbar-brand">
           <span class="navbar-brand mb-0 h1"><i class="fas fa-bolt mr-3"></i>ContractHUB</span>
       </a>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav">
+         <!-- <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav">
           <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="myNav">
@@ -30,87 +31,88 @@
                   <a href="SearchJobs.html" class="nav-link">Search Jobs</a>
                </li>
           </ul>
-      </div>
+      </div>-->
   </nav>
     <div class="container">
-        <form class="needs-validation" novalidate>
-            <div class="form-row">
-              <div class="col-md-4 mb-3">
-                <label for="validationCustom01">First name</label>
-                <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Sean" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label for="validationCustom02">Last name</label>
-                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Burke" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-              </div>
-              <div class="col-md-4 mb-3">
-                <label for="validationCustomUsername">Username</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <div id="regForm">
+          <form class="needs-validation" novalidate>
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustom01">First name</label>
+                  <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Sean" required>
+                  <div class="valid-feedback">
+                    Looks good!
                   </div>
-                  <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustom02">Last name</label>
+                  <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Burke" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustomUsername">Username</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                      Please choose a username.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationCustom03">City</label>
+                  <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
                   <div class="invalid-feedback">
-                    Please choose a username.
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="validationCustom04">Province</label>
+                  <input type="text" class="form-control" id="validationCustom04" placeholder="Province" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid Province.
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="validationCustom05">Zip</label>
+                  <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid zip.
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="form-row">
-              <div class="col-md-6 mb-3">
-                <label for="validationCustom03">City</label>
-                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
-                <div class="invalid-feedback">
-                  Please provide a valid city.
+              <div class="form-group">
+                <label for="addProfilePhoto">Add Profile photo</label>
+                <input type="file" class="form-control-file" id="addProfilePhoto">
+              </div>
+              <div class="form-group">
+                <label for="addCertifications">Add Certifications</label>
+                <input type="file" class="form-control-file" id="addCertifications">
+              </div>
+              <div class="form-group">
+                <label for="addIdentification">Add Identification</label>
+                <input type="file" class="form-control-file" id="addIdentification">
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
                 </div>
               </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationCustom04">Province</label>
-                <input type="text" class="form-control" id="validationCustom04" placeholder="Province" required>
-                <div class="invalid-feedback">
-                  Please provide a valid Province.
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="validationCustom05">Zip</label>
-                <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-                <div class="invalid-feedback">
-                  Please provide a valid zip.
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="addProfilePhoto">Add Profile photo</label>
-              <input type="file" class="form-control-file" id="addProfilePhoto">
-            </div>
-            <div class="form-group">
-              <label for="addCertifications">Add Certifications</label>
-              <input type="file" class="form-control-file" id="addCertifications">
-            </div>
-            <div class="form-group">
-              <label for="addIdentification">Add Identification</label>
-              <input type="file" class="form-control-file" id="addIdentification">
-            </div>
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                  Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                  You must agree before submitting.
-                </div>
-              </div>
-            </div>
-            <button class="btn btn-primary" type="submit">Submit form</button>
-          </form>
-          
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </form>
+      </div>
           <script>
           // Example starter JavaScript for disabling form submissions if there are invalid fields
           (function() {
